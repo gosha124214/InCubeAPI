@@ -1,0 +1,427 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "WebApplication1",
+    "version": "1.0"
+  },
+  "paths": {
+    "/WeatherForecast/{id}": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableBird"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableBird"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableBird"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WeatherForecast/dop/{id}": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TableProgram"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TableProgram"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TableProgram"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WeatherForecast/countallprogram": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Effect": {
+        "type": "object",
+        "properties": {
+          "element": {
+            "$ref": "#/components/schemas/Element"
+          },
+          "isAttached": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "resolveId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Element": {
+        "type": "object",
+        "properties": {
+          "dispatcher": {
+            "$ref": "#/components/schemas/IDispatcher"
+          },
+          "bindingContext": {
+            "nullable": true
+          },
+          "automationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "classId": {
+            "type": "string",
+            "nullable": true
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Effect"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "styleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "logicalChildren": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Element"
+            },
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "realParent": {
+            "$ref": "#/components/schemas/Element"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/Element"
+          },
+          "effectControlProvider": {
+            "$ref": "#/components/schemas/IEffectControlProvider"
+          },
+          "handler": {
+            "$ref": "#/components/schemas/IElementHandler"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IDispatcher": {
+        "type": "object",
+        "properties": {
+          "isDispatchRequired": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IEffectControlProvider": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "IElement": {
+        "type": "object",
+        "properties": {
+          "handler": {
+            "$ref": "#/components/schemas/IElementHandler"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/IElement"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IElementHandler": {
+        "type": "object",
+        "properties": {
+          "platformView": {
+            "nullable": true,
+            "readOnly": true
+          },
+          "virtualView": {
+            "$ref": "#/components/schemas/IElement"
+          },
+          "mauiContext": {
+            "$ref": "#/components/schemas/IMauiContext"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IMauiContext": {
+        "type": "object",
+        "properties": {
+          "services": {
+            "$ref": "#/components/schemas/IServiceProvider"
+          },
+          "handlers": {
+            "$ref": "#/components/schemas/IMauiHandlersFactory"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IMauiHandlersFactory": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "IServiceProvider": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ImageSource": {
+        "type": "object",
+        "properties": {
+          "dispatcher": {
+            "$ref": "#/components/schemas/IDispatcher"
+          },
+          "bindingContext": {
+            "nullable": true
+          },
+          "automationId": {
+            "type": "string",
+            "nullable": true
+          },
+          "classId": {
+            "type": "string",
+            "nullable": true
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Effect"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "styleId": {
+            "type": "string",
+            "nullable": true
+          },
+          "logicalChildren": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Element"
+            },
+            "nullable": true,
+            "readOnly": true,
+            "deprecated": true
+          },
+          "realParent": {
+            "$ref": "#/components/schemas/Element"
+          },
+          "parent": {
+            "$ref": "#/components/schemas/Element"
+          },
+          "effectControlProvider": {
+            "$ref": "#/components/schemas/IEffectControlProvider"
+          },
+          "handler": {
+            "$ref": "#/components/schemas/IElementHandler"
+          },
+          "isEmpty": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TableBird": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idProgram": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameBird": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateTimeValue": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "imageBirdFile": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "imageSource": {
+            "$ref": "#/components/schemas/ImageSource"
+          },
+          "daysUntilHatching": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TableProgram": {
+        "type": "object",
+        "properties": {
+          "idProgram": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minTemperature": {
+            "type": "number",
+            "format": "float"
+          },
+          "maxTemperature": {
+            "type": "number",
+            "format": "float"
+          },
+          "minHumidity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxHumidity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minАmountTurn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxАmountTurn": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "аmountCooling": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "minTimeCooling": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "maxTimeCooling": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
