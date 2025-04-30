@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Diplom InCub\\GitHubAPI\\WebApplication1\\WebApplication1.csproj": {}
+    "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\Diplom InCub\\GitHubAPI\\WebApplication1\\WebApplication1.csproj": {
+    "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Diplom InCub\\GitHubAPI\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "D:\\Diplom InCub\\GitHubAPI\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\Гашик\\.nuget\\packages\\",
-        "outputPath": "D:\\Diplom InCub\\GitHubAPI\\WebApplication1\\obj\\",
+        "outputPath": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\Гашик\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",

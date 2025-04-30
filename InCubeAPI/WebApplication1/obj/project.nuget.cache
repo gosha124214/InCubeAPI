@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gt3doEEsvQE=",
+  "dgSpecHash": "doEuU9OxjqA=",
   "success": true,
-  "projectFilePath": "D:\\Diplom InCub\\GitHubAPI\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Гашик\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Гашик\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

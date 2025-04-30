@@ -26,11 +26,19 @@ public class WeatherForecastController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<TableBird>> GetDopInfoId(uint id)
     {
-        // Получаем запись из базы данных по заданному id
         var tableBird = await _context.TableBird
             .FindAsync(id); // Используем FindAsync для поиска по первичному ключу
 
-        if (tableBird == null)
+        if (tableBird != null) // Проверяем, что объект найден
+        {
+            // Получаем количество строк в TableProgram с заданным IdProgram
+            int count = await _context.TableDays
+                .CountAsync(b => b.IdProgram == tableBird.IdProgram); // Считаем количество строк
+
+            // Приводим к byte, проверяя, что значение не превышает 255
+            tableBird.DaysUntilHatching = (byte)Math.Min(count, 255);
+        }
+        else
         {
             return NotFound(); // Возвращаем 404, если запись не найдена
         }
