@@ -5,6 +5,17 @@ using System.Threading.Tasks;
 using System;
 using Microsoft.EntityFrameworkCore;
 using AppInCube.Classes.SQLBD;
+using System.Net.Mail;
+using System.Collections.Concurrent;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Concurrent;
+using System.Threading.Tasks;
+using MimeKit;
+using MailKit.Net.Smtp;
+using WebApplication1.Classes.Authorization;
+using MailKit.Security;
+using MailKit;
 
 
 namespace WebApplication1.Controllers;
@@ -16,7 +27,8 @@ namespace WebApplication1.Controllers;
 public class WeatherForecastController : ControllerBase
 {
     private readonly AppDbContext _context; // Контекст базы данных
-
+                                            // Временное хранилище для кода (email -> код)
+    private static ConcurrentDictionary<string, string> _verificationCodes = new();
     public WeatherForecastController(AppDbContext context)
     {
         _context = context; // Инициализируем контекст
@@ -105,4 +117,75 @@ public class WeatherForecastController : ControllerBase
     }
 
 
+    [HttpPost("sendcode")]
+    public async Task<IActionResult> SendCode([FromBody] EmailRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.Email))
+            return BadRequest("Email не может быть пустым.");
+
+        string code = GenerateCode();
+
+        bool emailSent = await SendEmailAsync(request.Email, code);
+        if (!emailSent)
+            return StatusCode(500, "Не удалось отправить код на почту.");
+
+        _verificationCodes[request.Email] = code;
+
+        return Ok("Код отправлен на почту.");
+    }
+
+    [HttpPost("verifycode")]
+    public IActionResult VerifyCode([FromBody] VerifyCodeRequest request)
+    {
+        if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Code))
+            return BadRequest("Email и код должны быть заполнены.");
+
+        if (!_verificationCodes.TryGetValue(request.Email, out var storedCode))
+            return BadRequest("Код не найден или истек.");
+
+        if (storedCode != request.Code)
+            return BadRequest("Неверный код.");
+
+        _verificationCodes.TryRemove(request.Email, out _);
+
+        return Ok("Код подтвержден.");
+    }
+
+    private string GenerateCode()
+    {
+        var random = new Random();
+        return random.Next(1000, 10000).ToString("D4");
+    }
+    private async Task<bool> SendEmailAsync(string email, string code)
+    {
+        try
+        {
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("InCube", "i23293533@gmail.com")); // замените на ваш адрес
+            message.To.Add(MailboxAddress.Parse(email));
+            message.Subject = "Код подтверждения";
+            message.Body = new TextPart("plain")
+            {
+                Text = $"Ваш код подтверждения: {code}"
+            };
+
+
+            using (var client = new MailKit.Net.Smtp.SmtpClient())
+            {
+                await client.ConnectAsync("smtp.gmail.com", 465, true);
+                await client.AuthenticateAsync("i23293533@gmail.com", "podz ptui iwso suas");
+                await client.SendAsync(message);
+                await client.DisconnectAsync(true);
+            }
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка отправки почты: {ex.Message}");
+            return false;
+        }
+    }
 }
+
+

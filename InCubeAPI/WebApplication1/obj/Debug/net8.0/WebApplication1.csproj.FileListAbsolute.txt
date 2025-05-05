@@ -790,3 +790,7 @@ D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\obj\Debug\net8.0\refint\WebA
 D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\MailKit.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\MimeKit.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
