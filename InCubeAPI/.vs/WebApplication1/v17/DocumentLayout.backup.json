@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\classes\\sqlbd\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\classes\\sqlbd\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\classes\\authorization\\verifycoderequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +27,12 @@
       "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\classes\\authorization\\emailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\classes\\sqlbd\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\classes\\sqlbd\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\classes\\sqlbd\\tableuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\classes\\sqlbd\\tableuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89D73AF5-285F-4D55-AA44-869A816673EA}|WebApplication1\\WebApplication1.csproj|d:\\diplom incub\\githubapi\\incubeapi\\webapplication1\\classes\\sqlbd\\tablebird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,11 +86,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TableUser.cs",
+              "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableUser.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableUser.cs",
+              "ToolTip": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableUser.cs",
+              "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:18:48.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -116,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TableDays.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableDays.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableDays.cs",
@@ -124,12 +141,11 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableDays.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:18:10.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:18:10.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TableCooling.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableCooling.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableCooling.cs",
@@ -137,12 +153,11 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableCooling.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:10:07.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:10:07.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "TableTurn.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableTurn.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableTurn.cs",
@@ -150,12 +165,11 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableTurn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:09:05.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:09:05.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "TableTemperature.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableTemperature.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableTemperature.cs",
@@ -163,12 +177,11 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableTemperature.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:06:43.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:06:43.739Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "TableHumidity.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableHumidity.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableHumidity.cs",
@@ -176,12 +189,11 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableHumidity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T15:05:11.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:05:11.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "TableProgram.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableProgram.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableProgram.cs",
@@ -189,8 +201,7 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableProgram.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T13:52:43.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T13:52:43.548Z"
             },
             {
               "$type": "Document",
@@ -198,16 +209,16 @@
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Controllers\\WeatherForecastController.cs*",
-              "RelativeToolTip": "WebApplication1\\Controllers\\WeatherForecastController.cs*",
-              "ViewState": "AgIAAIkAAAAAAAAAAIA8wKoAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAMwIMAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T11:56:30.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\appsettings.json",
               "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
@@ -215,12 +226,11 @@
               "RelativeToolTip": "WebApplication1\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T18:23:17.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T18:23:17.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WebApplication1\\Properties\\launchSettings.json",
@@ -228,12 +238,11 @@
               "RelativeToolTip": "WebApplication1\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T18:09:11.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T18:09:11.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\appsettings.Development.json",
               "RelativeDocumentMoniker": "WebApplication1\\appsettings.Development.json",
@@ -241,12 +250,11 @@
               "RelativeToolTip": "WebApplication1\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T18:09:07.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T18:09:07.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "WebApplication1.http",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.http",
               "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.http",
@@ -254,12 +262,11 @@
               "RelativeToolTip": "WebApplication1\\WebApplication1.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-03-30T15:25:02.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T15:25:02.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TableBird.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\TableBird.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\TableBird.cs",
@@ -267,25 +274,24 @@
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\TableBird.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T14:58:24.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T14:58:24.563Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\AppDbContext.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Classes\\SQLBD\\AppDbContext.cs",
               "ToolTip": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Classes\\SQLBD\\AppDbContext.cs",
               "RelativeToolTip": "WebApplication1\\Classes\\SQLBD\\AppDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAABQwAsAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-29T18:25:54.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "WebApplication1\\WeatherForecast.cs",
@@ -298,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
@@ -311,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "WebApplication1.csproj",
               "DocumentMoniker": "D:\\Diplom InCub\\GitHubAPI\\InCubeAPI\\WebApplication1\\WebApplication1.csproj",
               "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.csproj",
@@ -319,8 +325,7 @@
               "RelativeToolTip": "WebApplication1\\WebApplication1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-27T18:38:45.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T18:38:45.723Z"
             }
           ]
         }

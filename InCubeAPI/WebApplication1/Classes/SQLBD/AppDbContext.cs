@@ -22,6 +22,9 @@ namespace WebApplication1.Classes.SQLBD
         public DbSet<TableCooling> TableCooling { get; set; } // Добавлено
         public DbSet<TableDays> TableDays { get; set; }
 
+        // Добавляем DbSet для пользователей
+        public DbSet<TableUser> TableUsers { get; set; } // Добавлено
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TableDays>()
@@ -46,6 +49,15 @@ namespace WebApplication1.Classes.SQLBD
                 .HasOne(td => td.TableCooling)
                 .WithMany() // Укажите, если у вас есть навигационное свойство в TableCooling
                 .HasForeignKey(td => td.IdCooling);
+
+            // Настройка для TableUser , если необходимо
+            modelBuilder.Entity<TableUser>()
+                .HasKey(u => u.IdUser); // Установка первичного ключа
+
+            modelBuilder.Entity<TableUser>()
+                .Property(u => u.IMail)
+                .IsRequired() // Убедитесь, что email обязателен
+                .HasMaxLength(100); // Установка максимальной длины для email
         }
     }
 }

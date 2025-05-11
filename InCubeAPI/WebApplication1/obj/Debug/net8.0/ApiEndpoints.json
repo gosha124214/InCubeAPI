@@ -73,8 +73,24 @@
   },
   {
     "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
-    "Method": "SendCode",
-    "RelativePath": "WeatherForecast/sendcode",
+    "Method": "Login",
+    "RelativePath": "WeatherForecast/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApplication1.Classes.Authorization.EmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
+    "Method": "Register",
+    "RelativePath": "WeatherForecast/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
