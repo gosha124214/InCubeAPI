@@ -794,3 +794,12 @@ D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\MailKit.dll
 D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\MimeKit.dll
 D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Diplom InCub\GitHubAPI\InCubeAPI\WebApplication1\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

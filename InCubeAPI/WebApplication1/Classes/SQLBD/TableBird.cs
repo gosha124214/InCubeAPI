@@ -7,7 +7,7 @@ namespace WebApplication1.Classes.SQLBD
     {
         [Key]
         public uint Id { get; set; }
-        public uint IdProgram { get; set; }
+      //  public uint IdProgram { get; set; }
         public string NameBird { get; set; }
         public string Content { get; set; }
         public DateTime DateTimeValue { get; set; }
@@ -16,7 +16,6 @@ namespace WebApplication1.Classes.SQLBD
         [NotMapped]
         public ImageSource ImageSource { get; set; } // свойство для хранения изображения
 
-        [NotMapped]
-        public byte DaysUntilHatching { get; set; }
+
     }
 }

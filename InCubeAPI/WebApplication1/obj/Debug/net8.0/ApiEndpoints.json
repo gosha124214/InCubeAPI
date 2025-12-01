@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "WebApplication1.Controllers.WeatherForecastController",
-    "Method": "GetDopInfoId",
+    "Method": "GetInfoId",
     "RelativePath": "WeatherForecast/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "WebApplication1.Classes.SQLBD.TableBird",
+        "Type": "WebApplication1.Classes.SQLBD.TableBirdAndProgramm",
         "MediaTypes": [
           "text/plain",
           "application/json",

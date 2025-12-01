@@ -8,6 +8,11 @@ using MailKit.Net.Smtp;
 using System;
 using WebApplication1.Classes.Authorization;
 using AppInCube.Classes.SQLBD;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+
 
 namespace WebApplication1.Controllers
 {
@@ -69,41 +74,74 @@ namespace WebApplication1.Controllers
             return Ok("Код отправлен на почту для входа.");
         }
 
+
         // Проверка кода (используется и для регистрации, и для авторизации)
         [HttpPost("verifycode")]
         public async Task<IActionResult> VerifyCode([FromBody] VerifyCodeRequest request)
         {
-            if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Code))
-                return BadRequest("Email и код должны быть заполнены.");
+           if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.Code))
+                 return BadRequest("Email и код должны быть заполнены.");
 
-            if (!_verificationCodes.TryGetValue(request.Email, out var codeInfo))
+           if (!_verificationCodes.TryGetValue(request.Email, out var codeInfo))
                 return BadRequest("Код не найден или истек.");
 
-            if (DateTime.UtcNow > codeInfo.Expiry)
-            {
+           if (DateTime.UtcNow > codeInfo.Expiry)
+           {
                 _verificationCodes.TryRemove(request.Email, out _);
                 return BadRequest("Код истек.");
-            }
+           }
 
-            if (codeInfo.Code != request.Code)
+           if (codeInfo.Code != request.Code)
                 return BadRequest("Неверный код.");
 
-            var user = await _context.TableUsers.FirstOrDefaultAsync(u => u.IMail == request.Email);
+           var user = await _context.TableUsers.FirstOrDefaultAsync(u => u.IMail == request.Email);
 
-            // Если пользователя нет (регистрация завершает создание)
-            if (user == null)
-            {
-                user = new TableUser { IMail = request.Email };
-                _context.TableUsers.Add(user);
-                await _context.SaveChangesAsync();
-                _verificationCodes.TryRemove(request.Email, out _);
-                return Ok(new { Message = "Регистрация завершена", UserId = user.IdUser });
-            }
+           // Если пользователя нет (регистрация завершает создание)
+           if (user == null)
+           {
+              user = new TableUser { IMail = request.Email };
+              _context.TableUsers.Add(user);
+              await _context.SaveChangesAsync();
+           }
 
-            // Если пользователь есть (авторизация подтверждена)
-            _verificationCodes.TryRemove(request.Email, out _);
-            return Ok(new { Message = "Вход успешно выполнен", UserId = user.IdUser });
+           // Генерация JWT токена
+           var token = GenerateJwtToken(user);
+
+           // Удаляем код после успешной проверки
+           _verificationCodes.TryRemove(request.Email, out _);
+
+        return Ok(new { Message = user == null ? "Регистрация завершена" : "Вход успешно выполнен", UserId = user.IdUser, Token = token });
         }
+
+        // Метод для генерации JWT токена
+        private string GenerateJwtToken(TableUser user)
+        {
+            // Утверждения (claims) для токена
+            var claims = new[]
+            {
+        new Claim(JwtRegisteredClaimNames.Sub, user.IdUser .ToString()), // Идентификатор пользователя
+        new Claim(JwtRegisteredClaimNames.Email, user.IMail) // Электронная почта пользователя
+    };
+
+            // Секретный ключ (замените на ваш сгенерированный ключ)
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("G5h8jK9lM2nP3qR4sT5uV6wX7yZ8aB9cD0eF1gH2iJ3kL4mN5oP6qR7sT8uV9wX")); // Пример сгенерированного ключа
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            // Создание токена
+            var token = new JwtSecurityToken(
+                issuer: "https://37.230.158.204:5162", // Ваш статический IP
+                audience: "https://37.230.158.204:5162", // Ваш статический IP
+                claims: claims,
+                expires: DateTime.UtcNow.AddDays(7), // Установите срок действия токена
+                signingCredentials: creds
+            );
+
+            // Возврат токена в виде строки
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+
+
 
         // Генерация 4-значного кода
         private string GenerateCode()
@@ -146,21 +184,21 @@ namespace WebApplication1.Controllers
 
         // GET: /weatherforecast/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<TableBird>> GetDopInfoId(uint id)
+        public async Task<ActionResult<TableBirdAndProgramm>> GetInfoId(uint id)
         {
-            var tableBird = await _context.TableBird.FindAsync(id);
+            var tableBirdAndProgramm = await _context.TableBirdAndProgramm.FindAsync(id);
 
-            if (tableBird != null)
+            if (tableBirdAndProgramm != null)
             {
-                int count = await _context.TableDays.CountAsync(b => b.IdProgram == tableBird.IdProgram);
-                tableBird.DaysUntilHatching = (byte)Math.Min(count, 255);
+                int count = await _context.TableDays.CountAsync(b => b.IdProgram == tableBirdAndProgramm.IdProgram);
+                tableBirdAndProgramm.DaysUntilHatching = (byte)Math.Min(count, 255);
             }
             else
             {
                 return NotFound();
             }
 
-            return Ok(tableBird);
+            return Ok(tableBirdAndProgramm);
         }
 
         // GET: /weatherforecast/dop/{id}
@@ -202,7 +240,7 @@ namespace WebApplication1.Controllers
         [HttpGet("countallprogram")]
         public async Task<ActionResult<uint>> GetTotalCount()
         {
-            int count = await _context.TableBird.CountAsync();
+            int count = await _context.TableBirdAndProgramm.CountAsync();
 
             if (count < 0)
             {

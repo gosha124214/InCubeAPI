@@ -13,7 +13,7 @@ namespace WebApplication1.Classes.SQLBD
 
         // DbSet для работы с таблицей WeatherForecasts
         public DbSet<WeatherForecast> WeatherForecasts { get; set; }
-
+        public DbSet<TableBirdAndProgramm> TableBirdAndProgramm { get; set; }
         public DbSet<TableBird> TableBird { get; set; }
         public DbSet<TableProgram> TableProgram { get; set; } // Исправлено: должно быть TableDays, а не TableProgram
         public DbSet<TableTemperature> TableTemperature { get; set; } // Добавлено
